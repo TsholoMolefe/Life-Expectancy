@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 # Load the trained regression model
-with open('C:\\Users\\Administrator\\Desktop\\App\model\\regression.pkl', 'rb') as file:
+with open('regression.pkl', 'rb') as file:
     
     regression_model = pickle.load(file)
 
