@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the trained regression model
 with open('regression.pkl', 'rb') as file:
-    model = pickle.load(file)
+    regression_model = pickle.load(file)
 
 # Function to predict using the loaded model
 def predict(model, input_data):
@@ -12,6 +12,7 @@ def predict(model, input_data):
     input_data = np.array(input_data).reshape(1, -1)
     prediction = model.predict(input_data)
     return prediction[0]
+
 
 def main():
     # Load the model
