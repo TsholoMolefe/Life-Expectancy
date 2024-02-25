@@ -3,10 +3,8 @@ import pickle
 import numpy as np
 
 # Load the trained regression model
-def load_model():
-    with open('regression.pkl', 'rb') as file:
-        model = pickle.load(file)
-    return model
+with open('regression.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 # Function to predict using the loaded model
 def predict(model, input_data):
