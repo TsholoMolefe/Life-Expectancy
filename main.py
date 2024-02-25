@@ -1,4 +1,5 @@
 import streamlit as st
+st._inject_rerun = True
 import pickle
 import numpy as np
 import os
