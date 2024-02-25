@@ -1,10 +1,14 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
+
+# Get the absolute path to the directory of this script
+script_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Load the trained regression model
-with open('regression.pkl', 'rb') as file:
-    
+model_path = os.path.join(script_directory, 'regression.pkl')
+with open(model_path, 'rb') as file:
     regression_model = pickle.load(file)
 
 # Function to predict using the loaded model
@@ -18,7 +22,7 @@ def main():
     # Streamlit app header
     st.title('Life Expectancy Predictor')
 
-    # Input features from user using dropdowns
+    # Input features from the user using dropdowns
     year = st.selectbox('Select a year', list(range(2000, 2031)), index=20)  # Default to 2020
     adult_mortality = st.selectbox('Adult Mortality', list(range(701)), index=50)  # Default to 50
     under_five_deaths = st.selectbox('Under Five Deaths', list(range(201)), index=20)  # Default to 20
