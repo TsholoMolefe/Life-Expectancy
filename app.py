@@ -4,7 +4,7 @@ import numpy as np
 
 # Load the trained regression model
 def load_model():
-    with open('C:\\Users\\Administrator\\Desktop\\App\\model\\regression.pkl', 'rb') as file:
+    with open('regression.pkl', 'rb') as file:
         model = pickle.load(file)
     return model
 
