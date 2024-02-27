@@ -14,7 +14,7 @@ with open(model_path, 'rb') as file:
 
 # Function to predict using the loaded model
 def predict(model, input_data):
-    # Assuming your model.predict function takes a 2D array as input
+   
     input_data = np.array(input_data).reshape(1, -1)
     prediction = model.predict(input_data)
     return prediction[0]
